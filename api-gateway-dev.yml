@@ -7,27 +7,27 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: student-service
-          uri: lb://student-service
+        - id: studentservice
+          uri: lb://studentservice
           predicates:
             - Path=/students/**
 
-        - id: application-service
-          uri: lb://application-service
+        - id: applicationservice
+          uri: lb://applicationservice
           predicates:
             - Path=/applications/**
 
-        - id: company-service
-          uri: lb://company-service
+        - id: companyservice
+          uri: lb://companyservice
           predicates:
             - Path=/companies/**
 
-        - id: opportunity-service
-          uri: lb://opportunity-service
+        - id: opportunityservice
+          uri: lb://opportunityservice
           predicates:
             - Path=/opportunities/**
 
-        - id: auth-service
-          uri: lb://auth-service
+        - id: authservice
+          uri: lb://authservice
           predicates:
             - Path=/auth/**
